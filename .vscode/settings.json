@@ -24,5 +24,8 @@
     "activityBar.background": "#060e42",
     "titleBar.activeBackground": "#060e42",
     "titleBar.activeForeground": "#EEFDFC"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
   }
 }
