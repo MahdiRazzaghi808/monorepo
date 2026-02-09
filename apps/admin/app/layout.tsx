@@ -18,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fa" dir="rtl">
-      <body >
+      <body className="text-white">
         {children}
       </body>
     </html>
