@@ -1,0 +1,25 @@
+:root {
+
+  /** Blue Scale **/
+  --blue-950: #02060d;     
+  --blue-900: #040c13;
+  --blue-850: #081a2a;
+  --blue-800: #0d2740;     
+  --blue-700: #133a66;     
+  --blue-600: #1d5fa3;
+
+  /** Neutral **/
+  --white: #ffffff;
+  --black: #050507;
+  --gray-100: #e3e8ff;
+  --gray-300: #b8c2f2;
+  --gray-400: #8a94b0;
+  --gray-500: #7480a8;
+
+  /** Semantic **/
+  --red-600: #c81e1e;
+  --blue-600: #1f6fe0;
+
+  /** Radius **/
+  --radius: 10px;
+}

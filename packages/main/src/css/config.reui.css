@@ -1,111 +1,43 @@
 @plugin 'tailwindcss-animate';
+@import './root.css';
 
-/** ===============================
-  Core Color Palette
-================================ */
+
 :root {
-
-  /** green Scale **/
-  --green-950: #031207;     /* خیلی تیره، نزدیک به black با ته‌مایه سبز */
-  --green-900: #081b0f;
-  --green-850: #0f2a1a;
-  --green-800: #163923;     /* جایگزین green-800 */
-  --green-700: #1e5435;     /* جایگزین primary قوی green-700 */
-  --green-600: #2a7a4e;
-
-  /** Neutral **/
-  --white: #ffffff;
-  --black: #09090b;
-  --gray-100: #e6e8ff;
-  --gray-300: #c7ccff;
-  --gray-400: #9aa0c7;
-  --gray-500: #8a90c7;
-
-  /** Semantic **/
-  --red-600: #dc2626;
-  --green-600: #22c55e;
-
-  /** Radius **/
-  --radius: 10px;
-}
-
-/** ===============================
-  Theme Tokens (Light Base)
-================================ */
-:root {
-  --background: var(--green-900);
+  --background: var(--blue-900);
   --foreground: var(--gray-100);
 
-  --card: var(--green-850);
+  --card: var(--blue-850);
   --card-foreground: var(--gray-100);
 
-  --popover: var(--green-850);
+  --popover: var(--blue-850);
   --popover-foreground: var(--gray-100);
 
-  --primary: var(--green-700);
+  --primary: var(--blue-700);
   --primary-foreground: var(--white);
 
-  --secondary: var(--green-800);
+  --secondary: var(--blue-800);
   --secondary-foreground: var(--gray-300);
 
-  --muted: var(--green-900);
+  --muted: var(--blue-900);
   --muted-foreground: var(--gray-400);
 
-  --accent: var(--green-600);
+  --accent: var(--blue-600);
   --accent-foreground: var(--white);
 
   --destructive: var(--red-600);
   --destructive-foreground: var(--white);
 
-  --success: var(--green-600);
+  --success: var(--blue-600);
   --success-foreground: var(--white);
 
   --mono: var(--gray-300);
   --mono-foreground: var(--black);
 
-  --border: var(--green-800);
-  --input: var(--green-800);
-  --ring: var(--green-600);
+  --border: var(--blue-800);
+  --input: var(--blue-800);
+  --ring: var(--blue-600);
 }
 
-/** ===============================
-  Dark Mode (Pure Dark)
-================================ */
-.dark {
-  --background: var(--green-950);
-  --foreground: var(--gray-100);
-
-  --card: var(--green-900);
-  --card-foreground: var(--gray-100);
-
-  --popover: var(--green-900);
-  --popover-foreground: var(--gray-100);
-
-  --primary: var(--green-700);
-  --primary-foreground: var(--white);
-
-  --secondary: var(--green-850);
-  --secondary-foreground: var(--gray-300);
-
-  --muted: var(--green-900);
-  --muted-foreground: var(--gray-500);
-
-  --accent: var(--green-600);
-  --accent-foreground: var(--white);
-
-  --destructive: var(--red-600);
-  --destructive-foreground: var(--white);
-
-  --success: var(--green-600);
-  --success-foreground: var(--white);
-
-  --mono: var(--gray-300);
-  --mono-foreground: var(--black);
-
-  --border: var(--green-800);
-  --input: var(--green-800);
-  --ring: var(--green-600);
-}
 
 /** ===============================
   Tailwind Theme Bridge

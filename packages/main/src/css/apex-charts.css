@@ -1,0 +1,52 @@
+
+.apexcharts-tooltip {
+  background: var(--color-card) !important;
+  color: var(--color-foreground) !important;
+  border: 1px solid var(--color-border) !important;
+  border-radius: var(--radius-lg);
+  box-shadow: none !important;
+
+  direction: rtl;
+  unicode-bidi: plaintext;
+  text-align: right;
+
+  padding: 0;
+}
+
+.apexcharts-tooltip-title {
+  background: transparent !important;
+  color: var(--color-muted-foreground) !important;
+  border-bottom: 1px solid var(--color-border);
+  font-size: 12px;
+}
+
+.apexcharts-tooltip * {
+  font-family: inherit !important;
+}
+
+
+/* ===============================
+   ApexCharts X-Axis Hover Tooltip
+================================ */
+
+.apexcharts-xaxis-tooltip {
+  background: var(--color-card) !important;
+  color: var(--color-foreground) !important;
+  border: 1px solid var(--color-border) !important;
+  border-radius: var(--radius-md);
+
+  direction: rtl;
+  unicode-bidi: plaintext;
+  text-align: center;
+
+  box-shadow: none !important;
+}
+
+.apexcharts-xaxis-tooltip:before,
+.apexcharts-xaxis-tooltip:after {
+  border-bottom-color: var(--color-card) !important;
+}
+
+.apexcharts-xaxistooltip{
+  display: none ;
+}

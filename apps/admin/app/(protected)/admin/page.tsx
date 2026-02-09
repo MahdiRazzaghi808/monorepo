@@ -54,11 +54,11 @@ function page() {
 
       <div className='mt-6'>
         <EarningsChart
-          title="درآمد"
+          title="فروش"
           categories={jalaliMonths}
           series={[
             {
-              name: 'درآمد',
+              name: 'فروش',
               data: [58, 64, 52, 45, 42, 38, 45, 53, 56, 65, 75, 85],
             },
           ]}

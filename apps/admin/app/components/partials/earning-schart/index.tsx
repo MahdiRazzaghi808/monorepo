@@ -1,14 +1,11 @@
 'use client';
 
-import { ApexOptions } from 'apexcharts';
-import ApexChart from 'react-apexcharts';
 import {
   Card,
   CardContent,
   CardHeader,
   CardTitle,
 } from '@repo/main/components/ui/card';
-import { Label } from '@repo/main/components/ui/label';
 import {
   Select,
   SelectContent,
@@ -16,7 +13,8 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@repo/main/components/ui/select';
-import { Switch } from '@repo/main/components/ui/switch';
+import { ApexOptions } from 'apexcharts';
+import ApexChart from 'react-apexcharts';
 import type { EarningsChartProps } from './props';
 
 const EarningsChart = ({
@@ -56,12 +54,16 @@ const EarningsChart = ({
       labels: {
         formatter: yAxisFormatter
           ? yAxisFormatter
-          : (val) => `${val.toLocaleString('fa-IR')} هزار`,
+          : (val) => `\u200E${val.toLocaleString('fa-IR')}\u200E هزار`,
         style: {
           fontSize: '12px',
           colors: 'var(--color-secondary-foreground)',
         },
       },
+
+
+
+
     },
     tooltip: {
       custom({ series, seriesIndex, dataPointIndex }) {
@@ -69,15 +71,16 @@ const EarningsChart = ({
         const month = categories[dataPointIndex];
 
         return `
-          <div class="flex flex-col gap-2 p-3">
-            <div class="text-sm text-secondary-foreground">
-              ${month} ${title}
-            </div>
-            <div class="font-semibold text-base">
-              ${value.toLocaleString('fa-IR')} تومان
-            </div>
-          </div>
-        `;
+  <div class="flex flex-col gap-2 p-3">
+    <div class="text-sm opacity-70">
+      ${month} 
+    </div>
+    <div class="font-semibold text-base">
+      ${value.toLocaleString('fa-IR')} تومان
+    </div>
+  </div>
+`;
+
       },
     },
     markers: {
@@ -99,27 +102,32 @@ const EarningsChart = ({
   };
 
   return (
-    <Card className="h-full">
+    <Card className="h-full" >
       <CardHeader className="flex flex-row items-center justify-between">
         <CardTitle>{title}</CardTitle>
 
         <div className="flex gap-5">
-          <div className="flex items-center gap-2">
-            <Label htmlFor="ref-only" className="text-sm">
-              فقط ارجاع‌ها
-            </Label>
-            <Switch id="ref-only" size="sm" />
-          </div>
 
           <Select defaultValue="12">
             <SelectTrigger className="w-28">
               <SelectValue />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="1">1 ماه</SelectItem>
-              <SelectItem value="3">3 ماه</SelectItem>
-              <SelectItem value="6">6 ماه</SelectItem>
-              <SelectItem value="12">12 ماه</SelectItem>
+              <SelectItem value="1">
+                ماه <span dir="ltr">1</span>
+              </SelectItem>
+
+              <SelectItem value="3">
+                ماه <span dir="ltr">3</span>
+              </SelectItem>
+
+              <SelectItem value="6">
+                ماه  <span dir="ltr">6</span>
+              </SelectItem>
+
+              <SelectItem value="12">
+                ماه <span dir="ltr">12</span>
+              </SelectItem>
             </SelectContent>
           </Select>
         </div>
@@ -138,3 +146,4 @@ const EarningsChart = ({
 };
 
 export { EarningsChart };
+
