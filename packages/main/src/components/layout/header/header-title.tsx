@@ -59,8 +59,8 @@ export function HeaderTitle({ title, breadcrumbs }: HeaderTitleProps) {
 
       <div>
         <UserDropdownMenu trigger={<img
-          className="w-9 h-9 rounded-full border border-border"
-          src="/media/avatars/300-2.png"
+          className="w-9 h-9 rounded-full border border-border cursor-pointer"
+          src="https://avatars.githubusercontent.com/u/103171417?v=4"
           alt="آواتار کاربر"
         />} />
       </div>

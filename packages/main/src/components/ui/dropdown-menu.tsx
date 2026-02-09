@@ -1,9 +1,9 @@
 'use client';
 
-import * as React from 'react';
-import { cn } from '@repo/main/utils/cn';
-import { Check, ChevronRight, Circle } from 'lucide-react';
 import * as DropdownMenuPrimitive from '@radix-ui/react-dropdown-menu';
+import { cn } from '@repo/main/utils/cn';
+import { Check, ChevronLeft, Circle } from 'lucide-react';
+import * as React from 'react';
 
 function DropdownMenu({ ...props }: React.ComponentProps<typeof DropdownMenuPrimitive.Root>) {
   return <DropdownMenuPrimitive.Root data-slot="dropdown-menu" {...props} />;
@@ -40,7 +40,7 @@ function DropdownMenuSubTrigger({
       {...props}
     >
       {children}
-      <ChevronRight data-slot="dropdown-menu-sub-trigger-indicator" className="ms-auto size-3.5! rtl:rotate-180" />
+      <ChevronLeft data-slot="dropdown-menu-sub-trigger-indicator" className="ms-auto size-3.5! rtl:rotate-180" />
     </DropdownMenuPrimitive.SubTrigger>
   );
 }
@@ -220,5 +220,6 @@ export {
   DropdownMenuSub,
   DropdownMenuSubContent,
   DropdownMenuSubTrigger,
-  DropdownMenuTrigger,
+  DropdownMenuTrigger
 };
+

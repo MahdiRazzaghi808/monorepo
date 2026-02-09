@@ -1,4 +1,3 @@
-import { Badge } from '@repo/main/components/ui/badge';
 import { Button } from '@repo/main/components/ui/button';
 import {
   DropdownMenu,
@@ -55,7 +54,7 @@ export function UserDropdownMenu({ trigger }: { trigger: ReactNode }) {
           <div className="flex items-center gap-2">
             <img
               className="w-9 h-9 rounded-full border border-border"
-              src="/media/avatars/300-2.png"
+              src="https://avatars.githubusercontent.com/u/103171417?v=4"
               alt="آواتار کاربر"
             />
 
@@ -187,7 +186,7 @@ export function UserDropdownMenu({ trigger }: { trigger: ReactNode }) {
         {/* Footer */}
         <div className="p-2 mt-1">
           <Button
-            variant="outline"
+            variant="destructive"
             size="sm"
             className="w-full"
             onClick={() => console.log('logout')}
