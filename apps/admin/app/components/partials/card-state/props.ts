@@ -1,10 +1,8 @@
+import { ReactNode } from "react";
+
 export interface IChannelStatsItem {
-    logo: string;
-    logoDark?: string;
-    info: string;
-    desc: string;
-    path?: string;
-  }
-  
-  export type IChannelStatsItems = IChannelStatsItem[];
-  
+  info: string;
+  desc: string;
+  icon?: ReactNode;
+}
+export type IChannelStatsItems = IChannelStatsItem[];

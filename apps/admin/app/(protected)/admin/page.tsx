@@ -3,29 +3,32 @@ import { IChannelStatsItems } from '../../components/partials/card-state/props';
 import { ChannelStats } from '../../components/partials/card-state';
 import { EarningsChart } from '../../components/partials/earning-schart';
 
+import { Users, GraduationCap, BookOpen, Video } from 'lucide-react';
+
 const statsItems: IChannelStatsItems = [
   {
-    logo: 'linkedin-2.svg',
-    info: '9.3K',
-    desc: 'همکاران فوق‌العاده',
+    icon: <Users />,
+    info: '450',
+    desc: 'دانشجویان ثبت‌نام شده',
   },
   {
-    logo: 'youtube-2.svg',
-    info: '24K',
-    desc: 'بازدید آموزش‌ها',
+    icon: <GraduationCap />,
+    info: '35',
+    desc: 'دوره‌های معتبر',
   },
   {
-    logo: 'instagram-03.svg',
-    info: '608',
-    desc: 'دنبال‌کننده جدید',
+    icon: <BookOpen />,
+    info: '120',
+    desc: 'درس‌های منتشر شده',
   },
   {
-    logo: 'tiktok.svg',
-    logoDark: 'tiktok-dark.svg',
-    info: '2.5K',
-    desc: 'مخاطبان لایو',
+    icon: <Video />,
+    info: '1.2K',
+    desc: 'بازدید ویدیوها',
   },
 ];
+
+
 
 const jalaliMonths = [
   'فروردین',

@@ -8,11 +8,10 @@
 
 
 
-
 /* ===== Minimal Scrollbar ===== */
 .scrollbar-minimal {
     scrollbar-width: thin;              /* Firefox */
-    scrollbar-color: #24308a transparent;
+    scrollbar-color: #163923 transparent;
   }
   
   /* Chrome / Edge / Safari */
@@ -25,13 +24,13 @@
   }
   
   .scrollbar-minimal::-webkit-scrollbar-thumb {
-    background-color: #24308a;
+    background-color: #081b0f;
     border-radius: 999px;
     opacity: 0.4;
   }
   
   .scrollbar-minimal::-webkit-scrollbar-thumb:hover {
-    background-color: #3b4ad9;
+    background-color: #081b0f;
   }
   
 
