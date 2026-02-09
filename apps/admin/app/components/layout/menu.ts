@@ -1,6 +1,6 @@
 "use client";
 import { LayoutGrid, Users, Settings, Shield } from "lucide-react";
-import { MenuConfig } from "@repo/main/components/layout/sidebar-base/types";
+import { MenuConfig } from "@repo/main/components/layout/sidebar/types"
 
 export const MENU_SIDEBAR: MenuConfig = [
   {

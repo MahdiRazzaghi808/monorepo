@@ -23,7 +23,7 @@ function Header({ MENU_SIDEBAR }: { MENU_SIDEBAR: MenuConfig }) {
 
 
   return (
-    <header className='my-4'>
+    <header className='my-4 pb-2.5 border-b border-gray-700 '>
       <div className="container-fluid flex grow items-center justify-between gap-2">
         {/* Mobile sidebar toggle */}
         {isMobile && (
@@ -62,11 +62,11 @@ function Header({ MENU_SIDEBAR }: { MENU_SIDEBAR: MenuConfig }) {
         )}
 
         {!isMobile && <HeaderTitle
-          title="به‌روزرسانی‌ها"
+          title="داشبورد"
           breadcrumbs={[
             { label: 'خانه', href: '/' },
             { label: 'حساب کاربری', href: '/account' },
-            { label: 'به‌روزرسانی‌ها' },
+            { label: 'کاربر' },
           ]}
         />
         }

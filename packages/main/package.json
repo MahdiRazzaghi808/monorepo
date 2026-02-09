@@ -3,17 +3,11 @@
   "version": "0.0.0",
   "type": "module",
   "exports": {
-    "./components/keenicons": "./src/components/keenicons/index.ts",
     "./styles.css": "./src/css/styles.css",
     "./components/*": "./src/components/*.tsx",
-    "./providers/*": "./src/providers/*.tsx",
     "./hooks/*": "./src/hooks/*.ts",
     "./hooks/use-mobile": "./src/hooks/use-mobile.tsx",
-    "./hooks/use-session": "./src/hooks/use-session.tsx",
     "./utils/*": "./src/utils/*.ts",
-    "./utils/assets": "./src/utils/assets.ts",
-    "./utils/validation": "./src/utils/validation.ts",
-    "./shared/*": "./src/shared/*.ts",
     "./postcss.config": "./postcss.config.mjs",
     "./fonts": "./src/fonts/font.ts"
   },
@@ -27,6 +21,7 @@
   "dependencies": {
     "@radix-ui/react-accordion": "^1.2.12",
     "@radix-ui/react-dialog": "^1.1.15",
+    "@radix-ui/react-dropdown-menu": "^2.1.16",
     "@radix-ui/react-label": "^2.1.8",
     "@radix-ui/react-popover": "^1.1.15",
     "@radix-ui/react-progress": "^1.1.8",

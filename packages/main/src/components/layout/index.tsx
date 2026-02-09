@@ -13,7 +13,7 @@ export function MainLayout({
     const isMobile = useIsMobile();
 
     return (
-        <div className="flex h-screen w-full [&_.container-fluid]:px-6">
+        <div className="flex h-screen w-full [&_.container-fluid]:px-6 bg-background">
             {!isMobile &&
 
                 <div className='w-90'>
@@ -21,12 +21,12 @@ export function MainLayout({
                 </div>
             }
 
-            <div className="flex w-full min-w-0 flex-1 flex-col">
+            <div className="w-full px-6" >
                 <Header MENU_SIDEBAR={sidebarMenuComp} />
 
 
                 <main
-                    className="grow-full flex-1 pt-(--header-height-mobile) pb-5 lg:ps-(--sidebar-width) lg:pt-(--header-height) px-6"
+                    className="grow-full flex-1 pt-(--header-height-mobile) pb-5 lg:ps-(--sidebar-width) lg:pt-(--header-height) "
                     role="content"
                 >
                     {children}
