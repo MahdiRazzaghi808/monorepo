@@ -1,3 +1,4 @@
+"use client"
 import React from 'react'
 import { IChannelStatsItems } from '../../components/partials/card-state/props';
 import { ChannelStats } from '../../components/partials/card-state';

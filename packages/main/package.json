@@ -5,6 +5,9 @@
   "exports": {
     "./styles.css": "./src/css/styles.css",
     "./components/*": "./src/components/*.tsx",
+
+  "./components/layout/sidebar/types": "./src/components/layout/sidebar/types.ts",
+
     "./hooks/*": "./src/hooks/*.ts",
     "./hooks/use-mobile": "./src/hooks/use-mobile.tsx",
     "./utils/*": "./src/utils/*.ts",

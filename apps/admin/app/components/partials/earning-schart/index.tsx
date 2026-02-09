@@ -54,17 +54,14 @@ const EarningsChart = ({
       labels: {
         formatter: yAxisFormatter
           ? yAxisFormatter
-          : (val) => `\u200E${val.toLocaleString('fa-IR')}\u200E هزار`,
+          : (val) => `\u200F${val.toLocaleString('fa-IR')} هزار`,
         style: {
           fontSize: '12px',
           colors: 'var(--color-secondary-foreground)',
         },
       },
-
-
-
-
     },
+
     tooltip: {
       custom({ series, seriesIndex, dataPointIndex }) {
         const value = series[seriesIndex][dataPointIndex] * 1000;
