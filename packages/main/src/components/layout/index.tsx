@@ -24,9 +24,9 @@ export function MainLayout({
             <div className="flex w-full min-w-0 flex-1 flex-col">
                 <Header MENU_SIDEBAR={sidebarMenuComp} />
 
-                
+
                 <main
-                    className="grow-full flex-1 pt-(--header-height-mobile) pb-5 lg:ps-(--sidebar-width) lg:pt-(--header-height)"
+                    className="grow-full flex-1 pt-(--header-height-mobile) pb-5 lg:ps-(--sidebar-width) lg:pt-(--header-height) px-6"
                     role="content"
                 >
                     {children}
