@@ -1,11 +1,11 @@
-import { Button } from "@repo/main/components/ui/button"
+"use client";
+import EducationalServicesSlider from "./components/partials/educational-services-slider";
+import Hero from "./components/partials/hero";
 export default function Home() {
   return (
-    <div className="text-center text-amber-900 text-2xl">
-      salam
-      <Button
-        variant={"secondary"}
-      >test</Button>
+    <div >
+      <Hero />
+      <EducationalServicesSlider />
     </div>
   );
 }
