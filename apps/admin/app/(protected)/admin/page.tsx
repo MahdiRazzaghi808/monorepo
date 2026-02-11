@@ -5,6 +5,7 @@ import { ChannelStats } from '../../components/partials/card-state';
 import { EarningsChart } from '../../components/partials/earning-schart';
 
 import { Users, GraduationCap, BookOpen, Video } from 'lucide-react';
+import { Integrations } from '../../components/partials/integrations';
 
 const statsItems: IChannelStatsItems = [
   {
@@ -48,12 +49,13 @@ const jalaliMonths = [
 
 function page() {
   return (
-    <div className=''>
+    <div className='flex flex-col gap-4'>
+
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4'>
         <ChannelStats items={statsItems} />
       </div>
 
-      <div className='mt-6'>
+      <div>
         <EarningsChart
           title="فروش"
           categories={jalaliMonths}
@@ -66,6 +68,10 @@ function page() {
         />
       </div>
 
+
+      <div>
+        <Integrations />
+      </div>
     </div>
   )
 }

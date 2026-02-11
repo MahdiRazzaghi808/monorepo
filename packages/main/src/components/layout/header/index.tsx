@@ -17,7 +17,7 @@ import { MenuConfig } from '../sidebar/types';
 import { HeaderTitle } from './header-title';
 
 
-function Header({ MENU_SIDEBAR }: { MENU_SIDEBAR: MenuConfig }) {
+function Header({ MENU_SIDEBAR, SIDEBAR_WIDTH }: { MENU_SIDEBAR: MenuConfig, SIDEBAR_WIDTH: number }) {
   const isMobile = useIsMobile();
   const [isSheetOpen, setIsSheetOpen] = useState(false);
 
@@ -36,13 +36,15 @@ function Header({ MENU_SIDEBAR }: { MENU_SIDEBAR: MenuConfig }) {
                   </Button>
                 </SheetTrigger>
                 <SheetContent
-                  className="w-96 gap-0 p-0"
+                  className="gap-0 p-0"
+                  style={{ width: SIDEBAR_WIDTH }}
+
                   side="left"
                   close={false}
                 >
                   <SheetHeader className="space-y-0 p-0" />
-                  <SheetBody className="flex grow p-0">
-                    <SidebarMenu MENU_SIDEBAR={MENU_SIDEBAR} />
+                  <SheetBody className="">
+                    <SidebarMenu MENU_SIDEBAR={MENU_SIDEBAR} SIDEBAR_WIDTH={SIDEBAR_WIDTH} />
                   </SheetBody>
                 </SheetContent>
               </Sheet>
