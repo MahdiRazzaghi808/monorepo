@@ -39,7 +39,7 @@ export default function EducationalServicesSlider() {
         }}
         spaceBetween={20}
         slidesPerView={5} // یا breakpoints مثل قبلی
-        className="px-6"
+        className="px-6 [mask-image:linear-gradient(to_right,transparent,black,transparent)]"
       >
         {items.concat(items).map((item, index) => {
           const Icon = item.icon;
