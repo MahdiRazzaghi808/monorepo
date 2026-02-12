@@ -1,8 +1,8 @@
 import '@repo/main/styles.css';
 import type { Metadata } from "next";
-import NavBar from "./components/layout/navbar";
-import "./globals.css"
 import Footer from './components/layout/footer';
+import NavBar from "./components/layout/navbar";
+import "./globals.css";
 
 export const metadata: Metadata = {
   title: "سامانه آموزش",
@@ -17,10 +17,8 @@ export default function RootLayout({
   return (
     <html lang="fa" dir="rtl">
       <body className="bg-background text-foreground">
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-          <NavBar />
-          {children}
-        </div>
+        <NavBar />
+        {children}
         <Footer />
       </body>
     </html>

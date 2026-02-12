@@ -10,12 +10,13 @@ import {
 import {
   ChevronDown,
   Clock,
-  ExternalLink,
   Globe,
   Menu,
   Smile,
   User,
   X,
+  BookOpen,
+  GraduationCap,
 } from "lucide-react";
 
 import { AnimatePresence, motion } from "framer-motion";
@@ -26,190 +27,170 @@ export default function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const menuItems = [
-    { name: "Pricing", href: "#pricing" },
-    { name: "Testimonials", href: "#testimonials" },
+    { name: "دوره‌ها", href: "#courses" },
+    { name: "اساتید", href: "#teachers" },
+    { name: "نظرات دانشجویان", href: "#testimonials" },
+    { name: "تعرفه‌ها", href: "#pricing" },
   ];
 
   return (
-    <nav className="sticky top-0 z-50 w-full backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="">
+    <nav
+      dir="rtl"
+      className="container sticky top-0 z-50 w-full backdrop-blur supports-[backdrop-filter]:bg-background/60"
+    >
+      <div>
         <div className="flex justify-between items-center h-16">
+
+          {/* موبایل - دکمه منو */}
           <div className="flex sm:hidden">
             <Button
               variant="ghost"
               size="icon"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="relative"
             >
               <motion.div
                 animate={{ rotate: isMenuOpen ? 90 : 0 }}
-                transition={{ duration: 0.3, ease: "easeInOut" }}
+                transition={{ duration: 0.3 }}
               >
                 {isMenuOpen ? <X /> : <Menu />}
               </motion.div>
             </Button>
           </div>
+
+          {/* لوگو موبایل */}
           <div className="flex sm:hidden">
-            <Link href="/" className="font-light tracking-tighter text-lg">
-              Acme
+            <Link href="/" className="font-bold tracking-tight text-lg">
+              آکادمی نوآور
             </Link>
           </div>
-          <div className="hidden sm:flex items-center space-x-8">
-            <Link href="/" className="font-light tracking-tighter text-2xl">
-              Acme
+
+          {/* دسکتاپ */}
+          <div className="hidden sm:flex items-center gap-8">
+            <Link href="/" className="font-bold tracking-tight text-2xl">
+              آکادمی نوآور
             </Link>
 
-            <Button asChild variant="ghost" size="sm">
-              <Link href="#pricing">Pricing</Link>
-            </Button>
+            {menuItems.map((item) => (
+              <Button key={item.name} asChild variant="ghost" size="sm">
+                <Link href={item.href}>{item.name}</Link>
+              </Button>
+            ))}
 
-            <Button asChild variant="ghost" size="sm">
-              <Link href="#testimonials">Testimonials</Link>
-            </Button>
-
+            {/* دراپ‌داون امکانات */}
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <Button variant="ghost" size="sm">
-                  Dropdown
-                  <ChevronDown className="ml-1 h-4 w-4" />
+                  امکانات
+                  <ChevronDown className="mr-1 h-4 w-4" />
                 </Button>
               </DropdownMenuTrigger>
+
               <DropdownMenuContent className="w-80">
+
                 <DropdownMenuItem>
-                  <ExternalLink className="mr-2 h-4 w-4" />
+                  <BookOpen className="ml-2 h-4 w-4" />
                   <div>
-                    <div className="font-semibold">Autoscaling</div>
+                    <div className="font-semibold">دوره‌های پروژه‌محور</div>
                     <div className="text-sm text-muted-foreground">
-                      ACME scales apps to meet user demand, automagically, based
-                      on load.
+                      یادگیری عملی با انجام پروژه‌های واقعی بازار کار.
                     </div>
                   </div>
                 </DropdownMenuItem>
+
                 <DropdownMenuItem>
-                  <User className="mr-2 h-4 w-4" />
+                  <User className="ml-2 h-4 w-4" />
                   <div>
-                    <div className="font-semibold">Usage Metrics</div>
+                    <div className="font-semibold">اساتید متخصص</div>
                     <div className="text-sm text-muted-foreground">
-                      Real-time metrics to debug issues. Slow query added?
-                      We&apos;ll show you exactly where.
+                      آموزش توسط افراد با تجربه صنعتی و تخصصی.
                     </div>
                   </div>
                 </DropdownMenuItem>
+
                 <DropdownMenuItem>
-                  <Globe className="mr-2 h-4 w-4" />
+                  <Globe className="ml-2 h-4 w-4" />
                   <div>
-                    <div className="font-semibold">Production Ready</div>
+                    <div className="font-semibold">دسترسی آنلاین</div>
                     <div className="text-sm text-muted-foreground">
-                      ACME runs on ACME, join us and others serving requests at
-                      web scale.
+                      یادگیری در هر زمان و هر مکان بدون محدودیت.
                     </div>
                   </div>
                 </DropdownMenuItem>
+
                 <DropdownMenuItem>
-                  <Clock className="mr-2 h-4 w-4" />
+                  <Clock className="ml-2 h-4 w-4" />
                   <div>
-                    <div className="font-semibold">+99% Uptime</div>
+                    <div className="font-semibold">پشتیبانی مستمر</div>
                     <div className="text-sm text-muted-foreground">
-                      Applications stay on the grid with high availability and
-                      high uptime guarantees.
+                      همراهی در طول مسیر یادگیری و پاسخ به سوالات شما.
                     </div>
                   </div>
                 </DropdownMenuItem>
+
                 <DropdownMenuItem>
-                  <Smile className="mr-2 h-4 w-4" />
+                  <GraduationCap className="ml-2 h-4 w-4" />
                   <div>
-                    <div className="font-semibold">+Supreme Support</div>
+                    <div className="font-semibold">مدرک پایان دوره</div>
                     <div className="text-sm text-muted-foreground">
-                      Overcome any challenge with a supporting team ready to
-                      respond.
+                      دریافت گواهی معتبر پس از تکمیل دوره‌ها.
                     </div>
                   </div>
                 </DropdownMenuItem>
+
+                <DropdownMenuItem>
+                  <Smile className="ml-2 h-4 w-4" />
+                  <div>
+                    <div className="font-semibold">رضایت دانشجویان</div>
+                    <div className="text-sm text-muted-foreground">
+                      بیش از ۹۵٪ رضایت کاربران از کیفیت آموزش.
+                    </div>
+                  </div>
+                </DropdownMenuItem>
+
               </DropdownMenuContent>
             </DropdownMenu>
           </div>
-          <div className="flex items-center space-x-4">
-            <Button asChild className="hidden sm:flex" size="sm">
-              <Link href="https://x.com/gonzalochale" target="_blank">
-                Connect on{" "}
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="12"
-                  height="12"
-                  fill="none"
-                  viewBox="0 0 1200 1227"
-                  className="ml-1"
-                >
-                  <path
-                    fill="currentColor"
-                    d="M714.163 519.284 1160.89 0h-105.86L667.137 450.887 357.328 0H0l468.492 681.821L0 1226.37h105.866l409.625-476.152 327.181 476.152H1200L714.137 519.284h.026ZM569.165 687.828l-47.468-67.894-377.686-540.24h162.604l304.797 435.991 47.468 67.894 396.2 566.721H892.476L569.165 687.854v-.026Z"
-                  />
-                </svg>
+
+          {/* دکمه ثبت‌نام */}
+          <div className="flex items-center">
+            <Button asChild size="sm" className="hidden sm:flex">
+              <Link href="/register">
+                ثبت‌نام / ورود
               </Link>
             </Button>
           </div>
         </div>
+
+        {/* منوی موبایل */}
         <AnimatePresence>
           {isMenuOpen && (
             <motion.div
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
-              transition={{ duration: 0.3, ease: "easeInOut" }}
+              transition={{ duration: 0.3 }}
               className="sm:hidden overflow-hidden"
             >
-              <motion.div
-                initial={{ y: -20 }}
-                animate={{ y: 0 }}
-                exit={{ y: -20 }}
-                transition={{ duration: 0.3, delay: 0.1 }}
-                className="px-2 pt-2 pb-3 space-y-1"
-              >
-                {menuItems.map((item, index) => (
-                  <motion.div
-                    key={item.name}
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.3, delay: 0.2 + index * 0.1 }}
-                  >
-                    <Link
-                      href={item.href}
-                      className="block px-3 py-2 text-base font-medium text-foreground hover:bg-muted rounded-md transition-colors duration-200"
-                      onClick={() => setIsMenuOpen(false)}
-                    >
-                      {item.name}
-                    </Link>
-                  </motion.div>
-                ))}
-                <motion.div
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.3, delay: 0.4 }}
-                  className="pt-2 mt-2"
-                >
+              <div className="px-2 pt-2 pb-3 space-y-2">
+                {menuItems.map((item) => (
                   <Link
-                    href="https://x.com/gonzalochale"
-                    target="_blank"
-                    className="flex items-center px-3 py-2 text-base font-medium text-foreground hover:bg-muted rounded-md transition-colors duration-200"
+                    key={item.name}
+                    href={item.href}
+                    className="block px-3 py-2 text-base font-medium hover:bg-muted rounded-md transition"
                     onClick={() => setIsMenuOpen(false)}
                   >
-                    Connect on{" "}
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      fill="none"
-                      viewBox="0 0 1200 1227"
-                      className="ml-2"
-                    >
-                      <path
-                        fill="currentColor"
-                        d="M714.163 519.284 1160.89 0h-105.86L667.137 450.887 357.328 0H0l468.492 681.821L0 1226.37h105.866l409.625-476.152 327.181 476.152H1200L714.137 519.284h.026ZM569.165 687.828l-47.468-67.894-377.686-540.24h162.604l304.797 435.991 47.468 67.894 396.2 566.721H892.476L569.165 687.854v-.026Z"
-                      />
-                    </svg>
+                    {item.name}
                   </Link>
-                </motion.div>
-              </motion.div>
+                ))}
+
+                <Link
+                  href="/register"
+                  className="block px-3 py-2 text-base font-medium hover:bg-muted rounded-md transition"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  ثبت‌نام / ورود
+                </Link>
+              </div>
             </motion.div>
           )}
         </AnimatePresence>

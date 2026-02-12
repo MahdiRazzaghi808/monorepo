@@ -9,10 +9,12 @@ export default function Home() {
   return (
     <div >
       <Hero />
-      <EducationalServicesSlider />
-      <Pricing />
-      <Testimonials />
-      <CTA />
+      <div className="container">
+        <EducationalServicesSlider />
+        <Pricing />
+        <Testimonials />
+        <CTA />
+      </div>
     </div>
   );
 }

@@ -1,9 +1,9 @@
 "use client";
 
-import { ArrowRight } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 import { Button } from "@repo/main/components/ui/button";
-import Star from "@/public/assets/emojistar 1.png";
-import Helix from "@/public/assets/helix2 1.png";
+import scholarship from "@/public/assets/education_certificate.png";
+import certificate from "@/public/assets/education_scholarship.png";
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 
@@ -20,42 +20,42 @@ const CTA = () => {
   return (
     <div
       ref={sectionRef}
+      dir="rtl"
       className="flex flex-col items-center overflow-x-clip mb-20"
     >
-      <div className="max-w-[570px] flex flex-col items-center relative">
+      <div className="max-w-[600px] flex flex-col items-center relative">
         <motion.img
-          src={Star.src}
-          alt="Star"
-          className="absolute -left-[345px] -top-28 pr-6 hidden md:block"
-          style={{
-            translateY: translateY,
-          }}
+          src={scholarship.src}
+          alt="بورسیه"
+          className="absolute -right-80 -top-20 w-80 h-80 hidden lg:block"
+          style={{ translateY }}
         />
+
         <motion.img
-          src={Helix.src}
-          alt="Helix"
-          className="absolute -right-80 -top-6 hidden md:block"
-          style={{
-            translateY: translateY,
-          }}
+          src={certificate.src}
+          alt="گواهینامه"
+          className="absolute -left-80 -top-4 w-80 h-80 hidden lg:block"
+          style={{ translateY }}
         />
-        <div className="text-4xl md:text-5xl lg:text-6xl py-6 font-bold tracking-tighter text-center">
-          Sign up for free today
+
+
+        <div className="text-4xl md:text-5xl lg:text-6xl py-6 font-bold tracking-tight text-center">
+          یادگیری را همین امروز شروع کن
         </div>
 
-        <div className="text-center text-lg mb-8 md:text-xl">
-          Celebrate the joy of accomplishment with an app designed to track your
-          progress and motivate your efforts.
+        <div className="text-center text-lg mb-8 md:text-xl leading-8 text-muted-foreground">
+          با دوره‌های کاربردی و پروژه‌محور مهارت‌های جدید یاد بگیر،
+          پیشرفتت را دنبال کن و مسیر حرفه‌ای خودت را بساز.
         </div>
 
         <div className="flex items-center gap-4 mt-4 text-lg">
-          <Button  >
-
-            Get for free
+          <Button>
+            ثبت‌نام رایگان
           </Button>
-          <div className="font-semibold cursor-pointer  hover:underline">
-            Learn more
-            <ArrowRight className="h-3 w-3 inline ml-2" />
+
+          <div className="font-semibold cursor-pointer hover:underline">
+            مشاهده دوره‌ها
+            <ArrowLeft className="h-4 w-4 inline mr-2" />
           </div>
         </div>
       </div>

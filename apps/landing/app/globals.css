@@ -1,4 +1,26 @@
-.swiper-wrapper {
-    transition-timing-function: linear !important;
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+@media (min-width: 640px) {
+  .container {
+    padding-left: 24px;  
+    padding-right: 24px;
   }
-  
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding-left: 32px;  
+    padding-right: 32px;
+  }
+}
+
+.swiper-wrapper {
+  transition-timing-function: linear !important;
+}
