@@ -15,9 +15,10 @@ import { useState } from 'react';
 import { SidebarMenu } from '../sidebar';
 import { MenuConfig } from '../sidebar/types';
 import { HeaderTitle } from './header-title';
+import { MultiAppSwitcher } from '../multi-app-switcher';
 
 
-function Header({ MENU_SIDEBAR, SIDEBAR_WIDTH }: { MENU_SIDEBAR: MenuConfig, SIDEBAR_WIDTH: number }) {
+function Header({ MENU_SIDEBAR, SIDEBAR_WIDTH, customHeader, logoComponents }: { MENU_SIDEBAR: MenuConfig, SIDEBAR_WIDTH: number, customHeader: React.ReactNode, logoComponents: React.ReactNode }) {
   const isMobile = useIsMobile();
   const [isSheetOpen, setIsSheetOpen] = useState(false);
 
@@ -25,6 +26,8 @@ function Header({ MENU_SIDEBAR, SIDEBAR_WIDTH }: { MENU_SIDEBAR: MenuConfig, SID
   return (
     <header className='my-4 pb-2.5 border-b border-gray-700 '>
       <div className="container-fluid flex grow items-center justify-between gap-2">
+        <MultiAppSwitcher />
+
         {/* Mobile sidebar toggle */}
         {isMobile && (
           <div className="flex w-full items-center justify-between gap-2">
@@ -44,7 +47,7 @@ function Header({ MENU_SIDEBAR, SIDEBAR_WIDTH }: { MENU_SIDEBAR: MenuConfig, SID
                 >
                   <SheetHeader className="space-y-0 p-0" />
                   <SheetBody className="">
-                    <SidebarMenu MENU_SIDEBAR={MENU_SIDEBAR} SIDEBAR_WIDTH={SIDEBAR_WIDTH} />
+                    <SidebarMenu MENU_SIDEBAR={MENU_SIDEBAR} SIDEBAR_WIDTH={SIDEBAR_WIDTH} logoComponents={logoComponents} />
                   </SheetBody>
                 </SheetContent>
               </Sheet>
@@ -63,13 +66,7 @@ function Header({ MENU_SIDEBAR, SIDEBAR_WIDTH }: { MENU_SIDEBAR: MenuConfig, SID
           </div>
         )}
 
-        {!isMobile && <HeaderTitle
-          title="داشبورد"
-          breadcrumbs={[
-            { label: 'خانه', href: '/' },
-            { label: 'حساب کاربری', href: '/account' },
-            { label: 'کاربر' },
-          ]}
+        {!isMobile && <HeaderTitle customHeader={customHeader}
         />
         }
       </div>

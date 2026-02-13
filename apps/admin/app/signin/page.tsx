@@ -1,7 +1,9 @@
 'use client';
 
+import { zodResolver } from '@hookform/resolvers/zod';
 import { Icons } from '@repo/main/components/common/icons';
 import { Alert, AlertIcon, AlertTitle } from '@repo/main/components/ui/alert';
+import { Button } from '@repo/main/components/ui/button';
 import { Checkbox } from '@repo/main/components/ui/checkbox';
 import {
     Form,
@@ -12,9 +14,6 @@ import {
     FormMessage,
 } from '@repo/main/components/ui/form';
 import { Input } from '@repo/main/components/ui/input';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { RiErrorWarningFill } from '@remixicon/react';
-import { Button } from '@repo/main/components/ui/button';
 import { AlertCircle, Eye, EyeOff, LoaderCircleIcon } from 'lucide-react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
@@ -67,19 +66,6 @@ export default function Page() {
                                 ورود به حساب کاربری
                             </h1>
                         </div>
-
-                        <Alert size="sm" close={false}>
-                            <AlertIcon>
-                                <RiErrorWarningFill className="text-primary" />
-                            </AlertIcon>
-                            <AlertTitle className="text-accent-foreground leading-6">
-                                برای ورود آزمایشی از ایمیل{' '}
-                                <span className="text-mono font-semibold">demo@kt.com</span>{' '}
-                                و رمز عبور{' '}
-                                <span className="text-mono font-semibold">demo123</span>{' '}
-                                استفاده کنید.
-                            </AlertTitle>
-                        </Alert>
 
                         <div className="flex flex-col gap-3.5">
                             <Button variant="outline" type="button">

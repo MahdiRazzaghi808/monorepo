@@ -1,19 +1,18 @@
 "use client";
 
 import {
+  Award,
+  BookOpen,
+  ClipboardList,
+  FileText,
+  Layers,
   LayoutGrid,
-  Users,
+  LifeBuoy,
   Settings,
   Shield,
-  BookOpen,
-  GraduationCap,
-  ClipboardList,
-  Award,
-  Wallet,
-  FileText,
-  LifeBuoy,
   UserCog,
-  Layers
+  Users,
+  Wallet
 } from "lucide-react";
 
 import { MenuConfig } from "@repo/main/components/layout/sidebar/types";
@@ -24,8 +23,6 @@ export const MENU_SIDEBAR: MenuConfig = [
     title: "داشبورد",
     icon: LayoutGrid,
     children: [
-      { title: "نمای کلی", path: "/dashboard" },
-      { title: "گزارش‌ها", path: "/dashboard/reports" },
       { title: "آمار و تحلیل", path: "/dashboard/analytics" }
     ]
   },
