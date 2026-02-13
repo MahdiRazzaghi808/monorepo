@@ -15,13 +15,13 @@ export default function ProtectedLayout({
       <div className="h-16 flex items-center justify-center gap-2">
         <GraduationCap className="w-8 h-8 text-primary" />
         <p className="font-bold text-lg">
-          سامانه آموزش
+          سامانه مدیریت کاربران
         </p>
       </div>
 
     }
     customHeader={
-      <Header title="داشبورد آموزش"
+      <Header title="داشبورد کاربران"
         breadcrumbs={[{ label: 'خانه', href: '/' }, { label: 'حساب کاربری', href: '/account' }, { label: 'کاربر' }]}
       />}
   >
