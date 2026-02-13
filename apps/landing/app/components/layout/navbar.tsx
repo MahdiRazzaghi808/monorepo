@@ -85,7 +85,7 @@ export default function NavBar() {
               animate={{ rotate: isMenuOpen ? 90 : 0 }}
               transition={{ duration: 0.3 }}
             >
-              {isMenuOpen ? <X /> : <Menu />}
+              {isMenuOpen ? <X /> : <Menu style={{ width: 24, height: 24 }} />}
             </motion.div>
           </Button>
         </div>
@@ -131,7 +131,7 @@ export default function NavBar() {
                       key={index}
                       className="group flex items-start gap-4 p-4 rounded-xl cursor-pointer transition hover:bg-muted/60"
                     >
-                        <Icon style={{ width: 24, height: 24 }} />
+                      <Icon style={{ width: 24, height: 24 }} />
 
                       <div>
                         <div className="font-semibold mb-1">

@@ -1,5 +1,6 @@
 import Logo from "@/public/assets/logo.png";
 import Image from "next/image";
+import Link from "next/link";
 import { AiFillInstagram } from "react-icons/ai";
 import {
   FaLinkedin,
@@ -72,7 +73,6 @@ const Footer = () => {
     <div className="border-t border-gray-700">
       <div className="flex flex-col md:flex-row py-16 gap-8 justify-between container">
 
-        {/* برند */}
         <div className="flex flex-col gap-8 text-gray-300/85 max-w-[320px]">
           <Image src={Logo} alt="لوگو" className="cursor-pointer" />
 
@@ -92,22 +92,24 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* سکشن‌ها */}
-        {footerData.sections.map((section, index) => (
-          <div key={index} className="flex flex-col gap-4">
-            <div className="font-bold text-lg">{section.title}</div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full">
+          {footerData.sections.map((section, index) => (
+            <div key={index} className="flex flex-col gap-4">
+              <div className="font-bold text-lg">{section.title}</div>
 
-            {section.links.map((link, i) => (
-              <a
-                key={i}
-                href={link.href}
-                className="cursor-pointer text-gray-300/85 hover:text-white transition"
-              >
-                {link.label}
-              </a>
-            ))}
-          </div>
-        ))}
+              {section.links.map((link, i) => (
+                <Link
+                  key={i}
+                  href={link.href}
+                  className="text-sm cursor-pointer text-gray-300/85 hover:text-white transition"
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+          ))}
+        </div>
+
       </div>
     </div>
   );
