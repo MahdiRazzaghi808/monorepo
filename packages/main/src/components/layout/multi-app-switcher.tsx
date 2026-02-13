@@ -4,9 +4,10 @@ import { Globe, ShoppingCart, Book, Settings, Box } from 'lucide-react';
 import { Button } from '@repo/main/components/ui/button';
 import { motion, AnimatePresence } from 'framer-motion';
 const apps = [
-  { name: 'سایت اصلی', icon: Globe, domain: 'https://sales.example.com' },
-  { name: 'سامانه فروش', icon: ShoppingCart, domain: 'https://sales.example.com' },
-  { name: 'سامانه آموزش', icon: Book, domain: 'https://edu.example.com' },
+  // TODO: READ domain from env
+  { name: 'سایت اصلی', icon: Globe, domain: 'http://localhost:3000' },
+  { name: 'سامانه فروش', icon: ShoppingCart, domain: 'http://localhost:3002' },
+  { name: 'سامانه آموزش', icon: Book, domain: 'http://localhost:3001' },
   { name: 'سامانه مدیریت', icon: Settings, domain: 'https://admin.example.com' },
 ];
 
