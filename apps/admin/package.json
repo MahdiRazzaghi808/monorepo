@@ -11,13 +11,17 @@
     "check-types": "next typegen && tsc --noEmit"
   },
   "dependencies": {
+    "@hookform/resolvers": "^5.2.2",
+    "@remixicon/react": "^4.9.0",
     "@repo/main": "workspace:*",
     "apexcharts": "^5.3.6",
     "lucide-react": "^0.539.0",
     "next": "16.1.5",
     "react": "^19.2.0",
     "react-apexcharts": "^1.9.0",
-    "react-dom": "^19.2.0"
+    "react-dom": "^19.2.0",
+    "react-hook-form": "^7.71.1",
+    "zod": "^4.3.6"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
