@@ -1,5 +1,4 @@
 "use client";
-/* eslint-disable @next/next/no-img-element */
 import { Button } from "@repo/main/components/ui/button";
 import {
   Dialog,
@@ -16,18 +15,18 @@ import Link from "next/link";
 export default function Hero() {
   return (
     <div className="relative justify-center items-center overflow-hidden">
-      <section className=" mx-auto px-4 py-28 gap-12 md:px-8 flex flex-col justify-center items-center">
+      <section className="mx-auto px-4 py-28 gap-12 md:px-8 flex flex-col justify-center items-center">
         <motion.div
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 1.5, type: "spring", bounce: 0 }}
           className="flex flex-col justify-center items-center space-y-6 max-w-4xl mx-auto text-center"
         >
-          <h1 className="text-4xl font-medium tracking-tight mx-auto md:text-6xl text-pretty">
+          <h1 className="text-2xl font-medium tracking-tight mx-auto md:text-4xl lg:text-6xl text-pretty">
             مسیر یادگیری حرفه‌ای خودت را همین امروز شروع کن
           </h1>
 
-          <p className="max-w-2xl text-lg mx-auto text-muted-foreground leading-8">
+          <p className="max-w-2xl text-md md:text-lg mx-auto text-muted-foreground leading-8">
             با دوره‌های پروژه‌محور و کاربردی، مهارت‌های موردنیاز بازار کار را
             یاد بگیر، پیشرفتت را دنبال کن و آینده شغلی‌ات را بساز.
           </p>

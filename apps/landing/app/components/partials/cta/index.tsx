@@ -39,7 +39,7 @@ const CTA = () => {
         />
 
 
-        <div className="text-4xl md:text-5xl lg:text-6xl py-6 font-bold tracking-tight text-center">
+        <div className="text-2xl mx-auto md:text-4xl lg:text-6xl text-pretty py-6 font-bold tracking-tight text-center">
           یادگیری را همین امروز شروع کن
         </div>
 
@@ -49,9 +49,7 @@ const CTA = () => {
         </div>
 
         <div className="flex items-center gap-4 mt-4 text-lg">
-          <Button>
-            ثبت‌نام رایگان
-          </Button>
+          
 
           <div className="font-semibold cursor-pointer hover:underline">
             مشاهده دوره‌ها

@@ -22,7 +22,7 @@ export default function Pricing() {
     {
       name: "پلن حرفه‌ای",
       desc: "بهترین گزینه برای دانشجویان و علاقه‌مندان",
-      price: 29,
+      price: 99,
       isMostPop: true,
       features: [
         "تمام امکانات پلن مبتدی",
@@ -35,7 +35,7 @@ export default function Pricing() {
     {
       name: "پلن پیشرفته",
       desc: "مناسب برای یادگیری کامل و پروژه واقعی",
-      price: 99,
+      price: 90,
       isMostPop: false,
       features: [
         "تمام امکانات پلن حرفه‌ای",
@@ -59,7 +59,7 @@ export default function Pricing() {
         transition={{ duration: 0.6, ease: "easeOut" }}
         className="text-center mb-16 flex flex-col gap-3"
       >
-        <h2 className="text-xl font-semibold sm:text-2xl bg-linear-to-b from-foreground to-muted-foreground text-transparent bg-clip-text">
+        <h2 className="text-2xl lg:text-3xl pt-6 font-bold tracking-tighter text-center">
           انتخاب پلن آموزشی مناسب
         </h2>
         <p className="mx-auto max-w-xl text-muted-foreground text-center">
@@ -67,7 +67,7 @@ export default function Pricing() {
         </p>
       </motion.div>
 
-      <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+      <div className="grid md:grid-cols-3 gap-16 md:gap-6 lg:gap-8  max-w-5xl mx-auto">
         {plans.map((plan, index) => (
           <motion.div
             key={plan.name}

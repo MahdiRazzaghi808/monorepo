@@ -1,5 +1,6 @@
-import Image from "next/image";
 import Logo from "@/public/assets/logo.png";
+import Image from "next/image";
+import { AiFillInstagram } from "react-icons/ai";
 import {
   FaLinkedin,
   FaPinterest,
@@ -7,18 +8,12 @@ import {
   FaXTwitter,
   FaYoutube,
 } from "react-icons/fa6";
-import { AiFillInstagram } from "react-icons/ai";
-import { MdOutlineArrowOutward } from "react-icons/md";
 
 const Footer = () => {
   const footerData = {
     brand: {
       description:
         "پلتفرم آموزشی ما با هدف ارائه دوره‌های کاربردی و مهارت‌محور برای رشد فردی و حرفه‌ای شما طراحی شده است.",
-      developer: {
-        name: "تیم توسعه پلتفرم آموزشی",
-        url: "#",
-      },
     },
 
     socials: [
@@ -76,19 +71,13 @@ const Footer = () => {
   return (
     <div className="border-t border-gray-700">
       <div className="flex flex-col md:flex-row py-16 gap-8 justify-between container">
-        
+
         {/* برند */}
         <div className="flex flex-col gap-8 text-gray-300/85 max-w-[320px]">
           <Image src={Logo} alt="لوگو" className="cursor-pointer" />
 
           <div className="leading-7">
             {footerData.brand.description}
-            <div className="font-semibold text-white hover:underline text-lg mt-3">
-              <a href={footerData.brand.developer.url}>
-                {footerData.brand.developer.name}
-                <MdOutlineArrowOutward className="inline mr-1" />
-              </a>
-            </div>
           </div>
 
           <div className="flex gap-4 text-2xl">
