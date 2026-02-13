@@ -7,15 +7,12 @@ import {
   SheetTrigger,
 } from '@repo/main/components/ui/sheet';
 import { useIsMobile } from '@repo/main/hooks/use-mobile';
-import { toAbsoluteUrl } from '@repo/main/utils/toAbsoluteUrl';
 import { Menu } from 'lucide-react';
-import Image from 'next/image';
-import Link from 'next/link';
 import { useState } from 'react';
+import { MultiAppSwitcher } from '../multi-app-switcher';
 import { SidebarMenu } from '../sidebar';
 import { MenuConfig } from '../sidebar/types';
 import { HeaderTitle } from './header-title';
-import { MultiAppSwitcher } from '../multi-app-switcher';
 
 
 function Header({ MENU_SIDEBAR, SIDEBAR_WIDTH, customHeader, logoComponents }: { MENU_SIDEBAR: MenuConfig, SIDEBAR_WIDTH: number, customHeader: React.ReactNode, logoComponents: React.ReactNode }) {
@@ -53,14 +50,7 @@ function Header({ MENU_SIDEBAR, SIDEBAR_WIDTH, customHeader, logoComponents }: {
               </Sheet>
             </div>
 
-            <Link href={process.env.NEXT_PUBLIC_WEBSITE_FRONT_URL || ''}>
-              <Image
-                src={toAbsoluteUrl('/images/logo/mini.svg')}
-                alt="Logo"
-                width={35}
-                height={35}
-              />
-            </Link>
+            {logoComponents}
 
             <div className="flex-1" />
           </div>
